@@ -1,4 +1,4 @@
-name: WPCS check
+name: WPCS check by crathod
 
 on: pull_request
 
