@@ -1,10 +1,35 @@
 <?xml version="1.0"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="WordPress-VIP-Go" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
-	<description>WordPress VIP Go Coding Standards</description>
+	<description>WordPress VIP Go Coding Standards by Crathod</description>
+	
+	<file>.</file>
+	
+	<!-- Exclude WP Core folders and files from being checked. -->
+	<exclude-pattern>/assets/*</exclude-pattern>
+	<exclude-pattern>/docroot/wp-admin/*</exclude-pattern>/
+	<exclude-pattern>/docroot/wp-includes/*</exclude-pattern>
+	<exclude-pattern>/docroot/wp-*.php</exclude-pattern>
+	<exclude-pattern>/docroot/index.php</exclude-pattern>
+	<exclude-pattern>/docroot/xmlrpc.php</exclude-pattern>
+	<exclude-pattern>/docroot/wp-content/plugins/*</exclude-pattern>
+
+	<!-- Exclude the Composer Vendor directory. -->
+	<exclude-pattern>/vendor/*</exclude-pattern>
+
+	<!-- Exclude the Node Modules directory. -->
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+
+	<!-- Exclude minified Javascript files. -->
+	<exclude-pattern>*.min.js</exclude-pattern>
 
 	<!-- The rules below are the changes from between the original sniff or parent ruleset, and what should be applied for this Standard. -->
 	<!-- Include the base VIP Minimum ruleset -->
 	<rule ref="WordPressVIPMinimum"/>
+	
+	<!-- Conversios custom rule by crathod -->
+	<rule ref="WordPress">
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.*" />
+	</rule>
 
 	<!-- Things that may be incompatible with the VIP Go infrastructure and needs a dev to review -->
 	<rule ref="WordPressVIPMinimum.Functions.RestrictedFunctions.file_ops_file_put_contents">
