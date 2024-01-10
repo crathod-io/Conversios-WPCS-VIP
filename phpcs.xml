@@ -9,9 +9,7 @@
 	<exclude-pattern>/docroot/wp-admin/*</exclude-pattern>/
 	<exclude-pattern>/docroot/wp-includes/*</exclude-pattern>
 	<exclude-pattern>/docroot/wp-*.php</exclude-pattern>
-	<exclude-pattern>/docroot/index.php</exclude-pattern>
 	<exclude-pattern>/docroot/xmlrpc.php</exclude-pattern>
-	<exclude-pattern>/docroot/wp-content/plugins/*</exclude-pattern>
 
 	<!-- Exclude the Composer Vendor directory. -->
 	<exclude-pattern>/vendor/*</exclude-pattern>
