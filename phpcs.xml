@@ -28,6 +28,7 @@
 	
 	<!-- Conversios custom rule by crathod -->
 	<rule ref="WordPress">
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis" />
 		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.*" />
 	</rule>
 
